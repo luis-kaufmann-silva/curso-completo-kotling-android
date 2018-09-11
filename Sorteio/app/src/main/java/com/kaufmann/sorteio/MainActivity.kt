@@ -15,6 +15,6 @@ class MainActivity : AppCompatActivity() {
 
     fun randonChoose(view: View){
         val n = Random().nextInt(11)
-        selected.setText("Número sorteado é: $n")
+        selected.text = "Número sorteado é: $n"
     }
 }
