@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Toast.makeText(applicationContext, "On Create!!", Toast.LENGTH_LONG).show()
+
         btn_cliente.setOnClickListener {
             Toast.makeText(applicationContext, "Abrindo cliente!", Toast.LENGTH_SHORT)
                     .show()
@@ -37,6 +39,40 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
+    override fun onStart() {
+        super.onStart()
+        Toast.makeText(applicationContext, "On Start!!", Toast.LENGTH_LONG).show()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Toast.makeText(applicationContext, "On Resume!!", Toast.LENGTH_LONG).show()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Toast.makeText(applicationContext, "On Pause!!", Toast.LENGTH_LONG).show()
+    }
+
+
+    override fun onStop() {
+        super.onStop()
+        Toast.makeText(applicationContext, "On Stop!!", Toast.LENGTH_LONG).show()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Toast.makeText(applicationContext, "On Restart!!", Toast.LENGTH_LONG).show()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Toast.makeText(applicationContext, "On Destroy!!", Toast.LENGTH_LONG).show()
+    }
+
+
 
 
 }
